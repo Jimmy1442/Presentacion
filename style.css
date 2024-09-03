@@ -49,3 +49,16 @@
 .menu li:hover {
     background-color: rgba(0,0,0,0.1);
 }
+
+.iconos-sociales {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.iconos-sociales a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
