@@ -196,6 +196,7 @@ body {
     padding: 20px 0;
     max-width: 1500px;
     margin: 0 auto;
+ 
 }
 
 .item {
@@ -219,5 +220,96 @@ body {
 .item p {
     margin-top: 10px;
     font-size: 18px;
-    color: #666;
+    color: #ffffff;
+}
+
+
+
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 1200px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding-left: 0;
+    }
+    .barra-lateral {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-right: 0;
+        padding: 10px;
+        min-height: auto;
+    }
+    .contenido-principal {
+        padding: 20px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .container-gustaria {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+    .item img {
+        max-height: 150px; /* Ajustar según sea necesario */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .contenedor {
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .barra-lateral {
+        width: 100%;
+        position: static;
+        margin-right: 0;
+        padding: 10px;
+        min-height: auto;
+    }
+    .contenido-principal {
+        padding: 10px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .container-gustaria {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+    .item img {
+        max-height: 120px; /* Ajustar según sea necesario */
+    }
+    .card-title {
+        font-size: 18px; /* Tamaño reducido para móviles */
+    }
+    .card-content {
+        font-size: 14px; /* Tamaño reducido para móviles */
+    }
+    .titulo-hobbies,
+    .titulo-me-gustaria {
+        font-size: 24px; /* Tamaño reducido para móviles */
+    }
 }
