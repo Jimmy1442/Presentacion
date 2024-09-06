@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
     font-family: Arial, sans-serif;
 }
 
@@ -10,13 +11,16 @@ body {
     background-size: cover;
     background-position: center;
     overflow-y: auto;
+    
     min-height: 100vh;
 }
 
 .contenedor {
     display: flex;
     padding-left: 320px;
+    
     width: 100%;
+    flex-direction: row;
 }
 
 .barra-lateral {
@@ -32,19 +36,18 @@ body {
     left: 0;
     z-index: 1000;
     padding: 20px;
+    overflow-y: auto; /* Añadido para manejar el desbordamiento */
 }
 
 .perfil {
     text-align: center;
     padding: 20px;
-
 }
 
 .perfil img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-
 }
 
 .perfil h2 {
@@ -68,7 +71,6 @@ body {
     padding: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-block-end: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 
 .menu li:hover {
@@ -89,7 +91,6 @@ body {
     text-decoration: none;
 }
 
-
 .año {
     text-align: center;
     padding: 10px;
@@ -97,14 +98,12 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
 .contenido-principal {
     flex-grow: 1;
     padding: 40px;
     text-align: center;
 }
 
-/* Estilos adicionales */
 .contenido-principal h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -121,9 +120,8 @@ body {
     margin: 0 auto;
 }
 
-
 .titulo-hobbies {
-    font-size: 28px;
+    font-size: 36px;
     color: #ffffff;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -179,7 +177,7 @@ body {
 }
 
 .titulo-me-gustaria {
-    font-size: 28px;
+    font-size: 36px;
     color: #ffffff;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -196,7 +194,6 @@ body {
     padding: 20px 0;
     max-width: 1500px;
     margin: 0 auto;
- 
 }
 
 .container-gustaria .item {
@@ -210,9 +207,7 @@ body {
 .container-gustaria .item img {
     width: 100%;
     height: auto;
-    /* Cambiado para mantener proporciones */
     max-height: 200px;
-    /* Ajuste opcional para limitar el tamaño */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -224,9 +219,74 @@ body {
 }
 
 
+.titulo-objetivos {
+    font-size: 36px;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: inline-block;
+    border-bottom: 5px solid #5e1d22;
+}
+
+.container-objetivos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.item-objetivo {
+    flex: 0 0 30%; 
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.item-objetivo img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-objetivo p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
 
 
-/* Media Queries para pantallas pequeñas */
+@media (max-width: 1200px) {
+    .item-objetivo {
+        flex: 0 0 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .item-objetivo {
+        flex: 0 0 100%; 
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-objetivo img {
+        max-height: 150px; 
+    }
+    .item-objetivo p {
+        font-size: 16px; 
+    }
+    .titulo-objetivos {
+        font-size: 24px; 
+    }
+}
+
+
 @media (max-width: 1200px) {
     .card {
         width: calc(50% - 20px);
@@ -237,6 +297,7 @@ body {
     .contenedor {
         padding-left: 0;
     }
+
     .barra-lateral {
         width: 100%;
         height: auto;
@@ -264,16 +325,16 @@ body {
         margin: 10px 0;
     }
     .item img {
-        max-height: 150px; /* Ajustar según sea necesario */
+        max-height: 150px; 
     }
 }
-
 
 @media (max-width: 480px) {
     .contenedor {
         flex-direction: column;
         padding-left: 0;
     }
+    
     .barra-lateral {
         width: 100%;
         position: static;
@@ -300,16 +361,16 @@ body {
         margin: 10px 0;
     }
     .item img {
-        max-height: 120px; /* Ajustar según sea necesario */
+        max-height: 120px; 
     }
     .card-title {
-        font-size: 18px; /* Tamaño reducido para móviles */
+        font-size: 18px; 
     }
     .card-content {
-        font-size: 14px; /* Tamaño reducido para móviles */
+        font-size: 14px; 
     }
     .titulo-hobbies,
     .titulo-me-gustaria {
-        font-size: 24px; /* Tamaño reducido para móviles */
+        font-size: 24px; 
     }
 }
