@@ -177,3 +177,47 @@ body {
     color: #ffffff;
     line-height: 1.5;
 }
+
+.titulo-me-gustaria {
+    font-size: 28px;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: inline-block;
+    border-bottom: 5px solid #5e1d22;
+}
+
+.container-gustaria {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.item {
+    flex: 0 0 25%;
+    margin: 0 15px;
+    box-sizing: border-box;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    /* Cambiado para mantener proporciones */
+    max-height: 200px;
+    /* Ajuste opcional para limitar el tamaño */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+}
